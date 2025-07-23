@@ -87,8 +87,8 @@ export const useMediaPipe = ({ onDetection }: UseMediaPipeProps) => {
         }
 
         // Only trigger alert if sustained for 1 second (1000 ms)
-        const drowsyDetected = closedEyeStartRef.current !== null && (now - closedEyeStartRef.current > 3000);
-        const yawnDetected = openMouthStartRef.current !== null && (now - openMouthStartRef.current > 3000);
+        const drowsyDetected = closedEyeStartRef.current !== null && (now - closedEyeStartRef.current > 2000);
+        const yawnDetected = openMouthStartRef.current !== null && (now - openMouthStartRef.current > 2000);
 
         const eyeStatus = drowsyDetected ? 'Drowsy' : 'Active';
         const mouthStatus = yawnDetected ? 'Yawning' : 'Active';

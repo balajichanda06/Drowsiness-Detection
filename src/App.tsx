@@ -147,6 +147,7 @@ const DrowsinessApp: React.FC = () => {
 
       {/* Audio Alarm Component */}
       <AlarmSystem isActive={state.alertActive} />
+      console.log('Alarm active:', state.alertActive)
     </div>
   );
 };
